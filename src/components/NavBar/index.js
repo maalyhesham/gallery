@@ -7,7 +7,7 @@ import PhotoCameraSharpIcon from '@mui/icons-material/PhotoCameraSharp';
 import SearchIcon from '@mui/icons-material/Search';
 import { Search, SearchIconWrapper, StyledInputBase } from "./styles";
 
-export default function SearchAppBar() {
+export default function SearchAppBar(props) {
     const handleChange = e => {
         setTimeout(() => props.setSearchValue(e.target.value), 500)
     }
@@ -34,7 +34,7 @@ export default function SearchAppBar() {
                     </Typography>
                     <Search>
                         <SearchIconWrapper  >
-                            <SearchIcon onClick={props.handelSearch} sx={{ cursor: "pointer", zIndex=10 }} />
+                            <SearchIcon onClick={props.handelSearch} sx={{ cursor: "pointer", zIndex: 10 }} />
                         </SearchIconWrapper>
                         <StyledInputBase
                             placeholder="Search…"

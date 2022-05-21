@@ -7,12 +7,13 @@ import Button from '@mui/material/Button';
 
 export default function CustomizedCard(props) {
     return (
-        <Card sx={{ maxWidth: 345, margin: "20px 10px ", width: 400 }}>
+        <Card sx={{ maxWidth: 450, margin: "20px 10px ", width: 400 }}>
             <CardMedia
                 component="img"
                 height="220"
                 image={props.urls.regular}
                 alt="green iguana"
+                sx={{ width: "400px" }}
             />
             <CardActions>
                 <Button size="small" onClick={() => window.open(props.urls.full)}>full resolution</Button>
